@@ -12,7 +12,7 @@
                 <field name="matricula"/>
                 <field name="autoescuela_id"/>
                 <field name="profesor_id"/>
-                <field name="examen_ids"/>
+                <field name="examen_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -34,7 +34,7 @@
                             <field name="profesor_id"/>
                         </group>
                         <group>
-                            <field name="examen_ids"/>
+                            <field name="examen_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>

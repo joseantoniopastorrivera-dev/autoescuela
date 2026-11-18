@@ -11,9 +11,9 @@
                 <field name="localidad"/>
                 <field name="provincia"/>
                 <field name="contacto"/>
-                <field name="examen_ids"/>
-                <field name="alumno_ids"/>
-                <field name="profesor_ids"/>
+                <field name="examen_ids" widget="many2many_tags"/>
+                <field name="alumno_ids" widget="many2many_tags"/>
+                <field name="profesor_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -34,15 +34,15 @@
                             <field name="contacto"/>
                         </group>
                         <group>
-                            <field name="examen_ids"/>
+                            <field name="examen_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                     <group>
                         <group>
-                            <field name="alumno_ids"/>
+                            <field name="alumno_ids" widget="many2many_tags"/>
                         </group>
                         <group>
-                            <field name="profesor_ids"/>
+                            <field name="profesor_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>

@@ -14,7 +14,7 @@
                 <field name="carnet"/>
                 <field name="aprobado"/>
                 <field name="alumno_id"/>
-                <field name="autoescuela_ids"/>
+                <field name="autoescuela_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -38,7 +38,7 @@
                             <field name="alumno_id"/>
                         </group>
                         <group>
-                            <field name="autoescuela_ids"/>
+                            <field name="autoescuela_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>

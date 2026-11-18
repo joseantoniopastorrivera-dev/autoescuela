@@ -13,7 +13,7 @@
                 <field name="autoescuela_id"/>
                 <field name="incorporacion"/>
                 <field name="antiguedad"/>
-                <field name="alumno_ids"/>
+                <field name="alumno_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -36,7 +36,7 @@
                             <field name="antiguedad"/>
                         </group>
                         <group>
-                            <field name="alumno_ids"/>
+                            <field name="alumno_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>
