@@ -15,7 +15,7 @@ con código autogenerado, perfiles de seguridad Gestor y Director e informes.
 
     # Categoría y versión (la versión se sube con cada funcionalidad nueva)
     'category': 'Services',
-    'version': '17.0.0.1.0',
+    'version': '17.0.0.2.0',
     'license': 'LGPL-3',
 
     # mail: el modelo Examen hereda mail.thread para que tracking=True funcione
@@ -27,6 +27,11 @@ con código autogenerado, perfiles de seguridad Gestor y Director e informes.
         'security/autoescuela_security.xml',
         'security/ir.model.access.csv',
         'data/autoescuela_sequence.xml',
+        'views/autoescuela_autoescuela_view.xml',
+        'views/autoescuela_profesor_view.xml',
+        'views/autoescuela_alumno_view.xml',
+        'views/autoescuela_examen_view.xml',
+        'views/autoescuela_menus.xml',
     ],
 
     # Tipo aplicación: sale en el filtro «Aplicaciones» con su icono
