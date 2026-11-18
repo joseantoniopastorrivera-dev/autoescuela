@@ -15,7 +15,7 @@ con código autogenerado, perfiles de seguridad Gestor y Director e informes.
 
     # Categoría y versión (la versión se sube con cada funcionalidad nueva)
     'category': 'Services',
-    'version': '17.0.0.4.0',
+    'version': '17.0.0.5.0',
     'license': 'LGPL-3',
 
     # mail: el modelo Examen hereda mail.thread para que tracking=True funcione

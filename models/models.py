@@ -58,6 +58,9 @@ class Profesor(models.Model):
                                 help='Años completos desde la fecha de incorporación (campo calculado)')
     alumno_ids = fields.One2many('autoescuela.alumno', 'profesor_id', string='Alumnos del profesor')
 
+    _sql_constraints = [
+        ('dni_profesor_unico', 'UNIQUE(dni)', 'Ya existe un profesor con ese DNI.'),
+    ]
 
     @api.depends('incorporacion')
     def _compute_antiguedad(self):
@@ -83,6 +86,9 @@ class Alumno(models.Model):
     matricula = fields.Char(string='Número de matrícula',
                             help='Número de matrícula del alumno en la autoescuela')
 
+    _sql_constraints = [
+        ('matricula_alumno_unica', 'UNIQUE(matricula)', 'Ya existe un alumno con ese número de matrícula.'),
+    ]
 
 
 class Examen(models.Model):
