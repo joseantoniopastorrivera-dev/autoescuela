@@ -1,34 +1,35 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "autoescuela",
+    'name': "Autoescuela",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Gestión de autoescuelas: profesores, alumnos y exámenes",
 
     'description': """
-Long description of module's purpose
+Aplicación para gestionar una red de autoescuelas (Autoescuela Complutum):
+autoescuelas, profesores con su antigüedad, alumnos matriculados y exámenes
+con código autogenerado, perfiles de seguridad Gestor y Director e informes.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "José Antonio Pastor Rivera",
+    'website': "https://github.com/joseantoniopastorrivera-dev/autoescuela",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    # Categoría y versión (la versión se sube con cada funcionalidad nueva)
+    'category': 'Services',
+    'version': '17.0.0.1.0',
+    'license': 'LGPL-3',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
+    # mail: el modelo Examen hereda mail.thread para que tracking=True funcione
+    'depends': ['base', 'mail'],
 
-    # always loaded
+    # Orden importante: grupos -> permisos -> datos -> vistas (con sus acciones)
+    # -> menús (usan las acciones) -> informes
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/autoescuela_security.xml',
+        'security/ir.model.access.csv',
+        'data/autoescuela_sequence.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
-}
 
+    # Tipo aplicación: sale en el filtro «Aplicaciones» con su icono
+    'application': True,
+    'installable': True,
+}
